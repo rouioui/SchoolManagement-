@@ -72,20 +72,9 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
         // line 11
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/OwlCarousel2-2.2.1/animate.css"), "html", null, true);
         yield "\" rel=\"stylesheet\"/>
-        <link href=\"";
-        // line 12
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/video-js/video-js.css"), "html", null, true);
-        yield "\" rel=\"stylesheet\"/>
-        <link href=\"";
-        // line 13
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/blog.css"), "html", null, true);
-        yield "\" rel=\"stylesheet\"/>
-        <link href=\"";
-        // line 14
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/blog_responsive.css"), "html", null, true);
-        yield "\" rel=\"stylesheet\"/>
     </head>
     <body>
+\t<div class=\"super_container\">
     <header class=\"header\">
 \t\t\t
 \t\t<!-- Top Bar -->
@@ -145,12 +134,15 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<nav class=\"main_nav_contaner\">
 \t\t\t\t\t\t\t\t<ul class=\"main_nav\">
-\t\t\t\t\t\t\t\t\t<li><a href=\"index.html\">Home</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"courses.html\">Courses</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"instructors.html\">Instructors</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Events</a></li>
-\t\t\t\t\t\t\t\t\t<li class=\"active\"><a href=\"blog.html\">Blog</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"contact.html\">Contact</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Home-display\"><a href=\"\">Home</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Courses-display\"><a href=\"\">Courses</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Instructors-display\"><a href=\"\">Instructors</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Events-display\"><a href=\"#\">Events</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Blog-display\"><a href=\"";
+        // line 78
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
+        yield "\">Blog</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"\">Contact</a></li>
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</nav>
 \t\t\t\t\t\t\t<div class=\"header_content_right ml-auto text-right\">
@@ -178,12 +170,44 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
-
+\t\t<!--Menu Content -->
+        \t<div class=\"menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400\">
+\t\t<div class=\"menu_close_container\"><div class=\"menu_close\"><div></div><div></div></div></div>
+\t\t<div class=\"search\">
+\t\t\t<form action=\"#\" class=\"header_search_form menu_mm\">
+\t\t\t\t<input type=\"search\" class=\"search_input menu_mm\" placeholder=\"Search\" required=\"required\">
+\t\t\t\t<button class=\"header_search_button d-flex flex-column align-items-center justify-content-center menu_mm\">
+\t\t\t\t\t<i class=\"fa fa-search menu_mm\" aria-hidden=\"true\"></i>
+\t\t\t\t</button>
+\t\t\t</form>
+\t\t</div>
+\t\t<nav class=\"menu_nav\">
+\t\t\t<ul class=\"menu_mm\">
+\t\t\t\t<li class=\"menu_mm\"><a href=\"index.html\">Home</a></li>
+\t\t\t\t<li class=\"menu_mm\"><a href=\"courses.html\">Courses</a></li>
+\t\t\t\t<li class=\"menu_mm\"><a href=\"instructors.html\">Instructors</a></li>
+\t\t\t\t<li class=\"menu_mm\"><a href=\"#\">Events</a></li>
+\t\t\t\t<li class=\"menu_mm\"><a href=\"blog.html\">Blog</a></li>
+\t\t\t\t<li class=\"menu_mm\"><a href=\"contact.html\">Contact</a></li>
+\t\t\t</ul>
+\t\t</nav>
+\t\t<div class=\"menu_extra\">
+\t\t\t<div class=\"menu_phone\"><span class=\"menu_title\">phone:</span>+44 300 303 0266</div>
+\t\t\t<div class=\"menu_social\">
+\t\t\t\t<span class=\"menu_title\">follow us</span>
+\t\t\t\t<ul>
+\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a></li>
+\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a></li>
+\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a></li>
+\t\t\t\t</ul>
+\t\t\t</div>
+\t\t</div>
+\t</div>
 \t</header>
         ";
-        // line 111
+        // line 141
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 120
+        // line 150
         yield "        \t<footer class=\"footer\">
 \t\t<div class=\"footer_body\">
 \t\t\t<div class=\"container\">
@@ -271,33 +295,35 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t</div>
 \t\t</div>
 \t</footer>
+\t<div>
     </body>
+
         <script src=\"";
-        // line 208
+        // line 240
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 209
+        // line 241
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/bootstrap4/popper.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 210
+        // line 242
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/bootstrap4/bootstrap.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 211
+        // line 243
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/OwlCarousel2-2.2.1/owl.carousel.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 212
+        // line 244
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/easing/easing.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 213
+        // line 245
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/parallax-js-master/parallax.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 214
+        // line 246
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/blog.js"), "html", null, true);
         yield "\"></script>
 </html>
@@ -331,7 +357,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         return; yield '';
     }
 
-    // line 111
+    // line 141
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -341,7 +367,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 112
+        // line 142
         yield "
 \t
 
@@ -380,7 +406,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
      */
     public function getDebugInfo()
     {
-        return array (  345 => 112,  335 => 111,  315 => 5,  301 => 214,  297 => 213,  293 => 212,  289 => 211,  285 => 210,  281 => 209,  277 => 208,  187 => 120,  185 => 111,  85 => 14,  81 => 13,  77 => 12,  73 => 11,  69 => 10,  65 => 9,  61 => 8,  57 => 7,  52 => 5,  46 => 1,);
+        return array (  371 => 142,  361 => 141,  341 => 5,  327 => 246,  323 => 245,  319 => 244,  315 => 243,  311 => 242,  307 => 241,  303 => 240,  211 => 150,  209 => 141,  143 => 78,  73 => 11,  69 => 10,  65 => 9,  61 => 8,  57 => 7,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -396,11 +422,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <link href=\"{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}\" rel=\"stylesheet\"/>
         <link href=\"{{ asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}\" rel=\"stylesheet\"/>
         <link href=\"{{ asset('plugins/OwlCarousel2-2.2.1/animate.css') }}\" rel=\"stylesheet\"/>
-        <link href=\"{{ asset('plugins/video-js/video-js.css') }}\" rel=\"stylesheet\"/>
-        <link href=\"{{ asset('styles/blog.css') }}\" rel=\"stylesheet\"/>
-        <link href=\"{{ asset('styles/blog_responsive.css') }}\" rel=\"stylesheet\"/>
     </head>
     <body>
+\t<div class=\"super_container\">
     <header class=\"header\">
 \t\t\t
 \t\t<!-- Top Bar -->
@@ -460,12 +484,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<nav class=\"main_nav_contaner\">
 \t\t\t\t\t\t\t\t<ul class=\"main_nav\">
-\t\t\t\t\t\t\t\t\t<li><a href=\"index.html\">Home</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"courses.html\">Courses</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"instructors.html\">Instructors</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Events</a></li>
-\t\t\t\t\t\t\t\t\t<li class=\"active\"><a href=\"blog.html\">Blog</a></li>
-\t\t\t\t\t\t\t\t\t<li><a href=\"contact.html\">Contact</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Home-display\"><a href=\"\">Home</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Courses-display\"><a href=\"\">Courses</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Instructors-display\"><a href=\"\">Instructors</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Events-display\"><a href=\"#\">Events</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Blog-display\"><a href=\"{{ path('app_blog') }}\">Blog</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"\">Contact</a></li>
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</nav>
 \t\t\t\t\t\t\t<div class=\"header_content_right ml-auto text-right\">
@@ -493,7 +517,39 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
-
+\t\t<!--Menu Content -->
+        \t<div class=\"menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400\">
+\t\t<div class=\"menu_close_container\"><div class=\"menu_close\"><div></div><div></div></div></div>
+\t\t<div class=\"search\">
+\t\t\t<form action=\"#\" class=\"header_search_form menu_mm\">
+\t\t\t\t<input type=\"search\" class=\"search_input menu_mm\" placeholder=\"Search\" required=\"required\">
+\t\t\t\t<button class=\"header_search_button d-flex flex-column align-items-center justify-content-center menu_mm\">
+\t\t\t\t\t<i class=\"fa fa-search menu_mm\" aria-hidden=\"true\"></i>
+\t\t\t\t</button>
+\t\t\t</form>
+\t\t</div>
+\t\t<nav class=\"menu_nav\">
+\t\t\t<ul class=\"menu_mm\">
+\t\t\t\t<li class=\"menu_mm\"><a href=\"index.html\">Home</a></li>
+\t\t\t\t<li class=\"menu_mm\"><a href=\"courses.html\">Courses</a></li>
+\t\t\t\t<li class=\"menu_mm\"><a href=\"instructors.html\">Instructors</a></li>
+\t\t\t\t<li class=\"menu_mm\"><a href=\"#\">Events</a></li>
+\t\t\t\t<li class=\"menu_mm\"><a href=\"blog.html\">Blog</a></li>
+\t\t\t\t<li class=\"menu_mm\"><a href=\"contact.html\">Contact</a></li>
+\t\t\t</ul>
+\t\t</nav>
+\t\t<div class=\"menu_extra\">
+\t\t\t<div class=\"menu_phone\"><span class=\"menu_title\">phone:</span>+44 300 303 0266</div>
+\t\t\t<div class=\"menu_social\">
+\t\t\t\t<span class=\"menu_title\">follow us</span>
+\t\t\t\t<ul>
+\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a></li>
+\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a></li>
+\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a></li>
+\t\t\t\t</ul>
+\t\t\t</div>
+\t\t</div>
+\t</div>
 \t</header>
         {% block body %}
 
@@ -591,7 +647,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t</div>
 \t\t</div>
 \t</footer>
+\t<div>
     </body>
+
         <script src=\"{{ asset('js/jquery-3.2.1.min.js') }}\"></script>
         <script src=\"{{ asset('styles/bootstrap4/popper.js') }}\"></script>
         <script src=\"{{ asset('styles/bootstrap4/bootstrap.min.js') }}\"></script>
@@ -600,6 +658,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src=\"{{ asset('plugins/parallax-js-master/parallax.min.js') }}\"></script>
         <script src=\"{{ asset('js/blog.js') }}\"></script>
 </html>
-", "base.html.twig", "C:\\Users\\x\\Documents\\GitHub\\gestion_scolair\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\x\\Documents\\GitHub\\SchoolManagement-\\templates\\base.html.twig");
     }
 }

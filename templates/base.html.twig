@@ -9,11 +9,9 @@
         <link href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}" rel="stylesheet"/>
         <link href="{{ asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}" rel="stylesheet"/>
         <link href="{{ asset('plugins/OwlCarousel2-2.2.1/animate.css') }}" rel="stylesheet"/>
-        <link href="{{ asset('plugins/video-js/video-js.css') }}" rel="stylesheet"/>
-        <link href="{{ asset('styles/blog.css') }}" rel="stylesheet"/>
-        <link href="{{ asset('styles/blog_responsive.css') }}" rel="stylesheet"/>
     </head>
     <body>
+	<div class="super_container">
     <header class="header">
 			
 		<!-- Top Bar -->
@@ -73,12 +71,12 @@
 							</div>
 							<nav class="main_nav_contaner">
 								<ul class="main_nav">
-									<li><a href="index.html">Home</a></li>
-									<li><a href="courses.html">Courses</a></li>
-									<li><a href="instructors.html">Instructors</a></li>
-									<li><a href="#">Events</a></li>
-									<li class="active"><a href="blog.html">Blog</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li id="Home-display"><a href="">Home</a></li>
+									<li id="Courses-display"><a href="">Courses</a></li>
+									<li id="Instructors-display"><a href="">Instructors</a></li>
+									<li id="Events-display"><a href="#">Events</a></li>
+									<li id="Blog-display"><a href="{{ path('app_blog') }}">Blog</a></li>
+									<li id="Contact-display"><a href="">Contact</a></li>
 								</ul>
 							</nav>
 							<div class="header_content_right ml-auto text-right">
@@ -106,7 +104,39 @@
 				</div>
 			</div>
 		</div>
-
+		<!--Menu Content -->
+        	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<div class="search">
+			<form action="#" class="header_search_form menu_mm">
+				<input type="search" class="search_input menu_mm" placeholder="Search" required="required">
+				<button class="header_search_button d-flex flex-column align-items-center justify-content-center menu_mm">
+					<i class="fa fa-search menu_mm" aria-hidden="true"></i>
+				</button>
+			</form>
+		</div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="index.html">Home</a></li>
+				<li class="menu_mm"><a href="courses.html">Courses</a></li>
+				<li class="menu_mm"><a href="instructors.html">Instructors</a></li>
+				<li class="menu_mm"><a href="#">Events</a></li>
+				<li class="menu_mm"><a href="blog.html">Blog</a></li>
+				<li class="menu_mm"><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="menu_extra">
+			<div class="menu_phone"><span class="menu_title">phone:</span>+44 300 303 0266</div>
+			<div class="menu_social">
+				<span class="menu_title">follow us</span>
+				<ul>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	</header>
         {% block body %}
 
@@ -204,7 +234,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</div>
 		</div>
 	</footer>
+	<div>
     </body>
+
         <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
         <script src="{{ asset('styles/bootstrap4/popper.js') }}"></script>
         <script src="{{ asset('styles/bootstrap4/bootstrap.min.js') }}"></script>
