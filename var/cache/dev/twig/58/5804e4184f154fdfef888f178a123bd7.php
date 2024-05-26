@@ -584,7 +584,7 @@ class __TwigTemplate_9b4c4f32a02536603d06e2dc0de33190 extends Template
 \t\t\t</div>
 \t\t</div>
 \t</div>
-     \t    <script>
+     \t<script>
 \t\tdocument.getElementById('Home-display').className += 'active';
 \t\t</script>
 
@@ -1121,7 +1121,7 @@ class __TwigTemplate_9b4c4f32a02536603d06e2dc0de33190 extends Template
 \t\t\t</div>
 \t\t</div>
 \t</div>
-     \t    <script>
+     \t<script>
 \t\tdocument.getElementById('Home-display').className += 'active';
 \t\t</script>
 

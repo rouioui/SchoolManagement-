@@ -72,6 +72,14 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
         // line 11
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/OwlCarousel2-2.2.1/animate.css"), "html", null, true);
         yield "\" rel=\"stylesheet\"/>
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 12
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/main_styles.css"), "html", null, true);
+        yield "\">
+<link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 13
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/responsive.css"), "html", null, true);
+        yield "\">
     </head>
     <body>
 \t<div class=\"super_container\">
@@ -139,7 +147,7 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t\t\t\t\t\t\t\t\t<li id=\"Instructors-display\"><a href=\"\">Instructors</a></li>
 \t\t\t\t\t\t\t\t\t<li id=\"Events-display\"><a href=\"#\">Events</a></li>
 \t\t\t\t\t\t\t\t\t<li id=\"Blog-display\"><a href=\"";
-        // line 78
+        // line 80
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
         yield "\">Blog</a></li>
 \t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"\">Contact</a></li>
@@ -205,9 +213,9 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t</div>
 \t</header>
         ";
-        // line 141
+        // line 143
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 150
+        // line 152
         yield "        \t<footer class=\"footer\">
 \t\t<div class=\"footer_body\">
 \t\t\t<div class=\"container\">
@@ -299,31 +307,31 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </body>
 
         <script src=\"";
-        // line 240
+        // line 242
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 241
+        // line 243
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/bootstrap4/popper.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 242
+        // line 244
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/bootstrap4/bootstrap.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 243
+        // line 245
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/OwlCarousel2-2.2.1/owl.carousel.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 244
+        // line 246
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/easing/easing.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 245
+        // line 247
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/parallax-js-master/parallax.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 246
+        // line 248
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/blog.js"), "html", null, true);
         yield "\"></script>
 </html>
@@ -357,7 +365,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         return; yield '';
     }
 
-    // line 141
+    // line 143
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -367,7 +375,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 142
+        // line 144
         yield "
 \t
 
@@ -406,7 +414,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
      */
     public function getDebugInfo()
     {
-        return array (  371 => 142,  361 => 141,  341 => 5,  327 => 246,  323 => 245,  319 => 244,  315 => 243,  311 => 242,  307 => 241,  303 => 240,  211 => 150,  209 => 141,  143 => 78,  73 => 11,  69 => 10,  65 => 9,  61 => 8,  57 => 7,  52 => 5,  46 => 1,);
+        return array (  379 => 144,  369 => 143,  349 => 5,  335 => 248,  331 => 247,  327 => 246,  323 => 245,  319 => 244,  315 => 243,  311 => 242,  219 => 152,  217 => 143,  151 => 80,  81 => 13,  77 => 12,  73 => 11,  69 => 10,  65 => 9,  61 => 8,  57 => 7,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -422,6 +430,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <link href=\"{{ asset('plugins/OwlCarousel2-2.2.1/owl.carousel.css') }}\" rel=\"stylesheet\"/>
         <link href=\"{{ asset('plugins/OwlCarousel2-2.2.1/owl.theme.default.css') }}\" rel=\"stylesheet\"/>
         <link href=\"{{ asset('plugins/OwlCarousel2-2.2.1/animate.css') }}\" rel=\"stylesheet\"/>
+\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('styles/main_styles.css') }}\">
+<link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('styles/responsive.css') }}\">
     </head>
     <body>
 \t<div class=\"super_container\">
