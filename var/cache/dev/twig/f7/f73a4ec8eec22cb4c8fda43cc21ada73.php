@@ -142,15 +142,27 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<nav class=\"main_nav_contaner\">
 \t\t\t\t\t\t\t\t<ul class=\"main_nav\">
-\t\t\t\t\t\t\t\t\t<li id=\"Home-display\"><a href=\"\">Home</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Courses-display\"><a href=\"\">Courses</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Instructors-display\"><a href=\"\">Instructors</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Home-display\"><a href=\"";
+        // line 76
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+        yield "\">Home</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Courses-display\"><a href=\"";
+        // line 77
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
+        yield "\">Courses</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Instructors-display\"><a href=\"";
+        // line 78
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
+        yield "\">Instructors</a></li>
 \t\t\t\t\t\t\t\t\t<li id=\"Events-display\"><a href=\"#\">Events</a></li>
 \t\t\t\t\t\t\t\t\t<li id=\"Blog-display\"><a href=\"";
         // line 80
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
         yield "\">Blog</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"\">Contact</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"";
+        // line 81
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
+        yield "\">Contact</a></li>
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</nav>
 \t\t\t\t\t\t\t<div class=\"header_content_right ml-auto text-right\">
@@ -414,7 +426,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
      */
     public function getDebugInfo()
     {
-        return array (  379 => 144,  369 => 143,  349 => 5,  335 => 248,  331 => 247,  327 => 246,  323 => 245,  319 => 244,  315 => 243,  311 => 242,  219 => 152,  217 => 143,  151 => 80,  81 => 13,  77 => 12,  73 => 11,  69 => 10,  65 => 9,  61 => 8,  57 => 7,  52 => 5,  46 => 1,);
+        return array (  391 => 144,  381 => 143,  361 => 5,  347 => 248,  343 => 247,  339 => 246,  335 => 245,  331 => 244,  327 => 243,  323 => 242,  231 => 152,  229 => 143,  164 => 81,  160 => 80,  155 => 78,  151 => 77,  147 => 76,  81 => 13,  77 => 12,  73 => 11,  69 => 10,  65 => 9,  61 => 8,  57 => 7,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -494,12 +506,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<nav class=\"main_nav_contaner\">
 \t\t\t\t\t\t\t\t<ul class=\"main_nav\">
-\t\t\t\t\t\t\t\t\t<li id=\"Home-display\"><a href=\"\">Home</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Courses-display\"><a href=\"\">Courses</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Instructors-display\"><a href=\"\">Instructors</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Home-display\"><a href=\"{{ path('app_home') }}\">Home</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Courses-display\"><a href=\"{{ path('app_blog') }}\">Courses</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Instructors-display\"><a href=\"{{ path('app_blog') }}\">Instructors</a></li>
 \t\t\t\t\t\t\t\t\t<li id=\"Events-display\"><a href=\"#\">Events</a></li>
 \t\t\t\t\t\t\t\t\t<li id=\"Blog-display\"><a href=\"{{ path('app_blog') }}\">Blog</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"\">Contact</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"{{ path('app_blog') }}\">Contact</a></li>
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</nav>
 \t\t\t\t\t\t\t<div class=\"header_content_right ml-auto text-right\">

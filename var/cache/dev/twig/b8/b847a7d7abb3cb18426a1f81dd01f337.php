@@ -87,7 +87,202 @@ class __TwigTemplate_956cb310e2083be93b0fda5baf0a8839 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "
+        yield "<link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/video-js/video-js.css"), "html", null, true);
+        yield "\">
+<link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 7
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/blog.css"), "html", null, true);
+        yield "\">
+<link rel=\"stylesheet\" type=\"text/css\" href=\"";
+        // line 8
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/blog_responsive.css"), "html", null, true);
+        yield "\">
+\t<!-- Home -->
+
+\t<div class=\"home\">
+\t\t
+\t</div>
+
+\t<!-- Blog -->
+
+\t<div class=\"blog\">
+\t\t<div class=\"container\">
+\t\t\t<div class=\"row\">
+\t\t\t\t<div class=\"col\">
+\t\t\t\t\t<div class=\"welcome_title\">Welcome to our blog!</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"row categories_row\">
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_1.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">travel</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_2.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">languages</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_3.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">cultures</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_4.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">fashion</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_5.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">cooking</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_6.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">hobbies</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t<!-- Blog Posts -->
+\t\t\t
+\t\t\t<div class=\"row blog_row\">
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_7.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Design Better Forms</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_8.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Art Helps Healing</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_9.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Art Helps Healing</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_10.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Art Helps Healing</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_11.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Art Helps Healing</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_12.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Art Helps Healing</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t</div>
+
+\t\t\t<!-- Load More -->
+\t\t\t<div class=\"row\">
+\t\t\t\t<div class=\"col\">
+\t\t\t\t\t<div class=\"load_more_button\"><a href=\"#\">load more</a></div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+\t    <script>
+\t\tdocument.getElementById('Blog-display').className += 'active';
+\t\t</script>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -119,7 +314,7 @@ class __TwigTemplate_956cb310e2083be93b0fda5baf0a8839 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  99 => 8,  95 => 7,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -129,7 +324,194 @@ class __TwigTemplate_956cb310e2083be93b0fda5baf0a8839 extends Template
 {% block title %}Hello BlogController!{% endblock %}
 
 {% block body %}
+<link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('plugins/video-js/video-js.css') }}\">
+<link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('styles/blog.css') }}\">
+<link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('styles/blog_responsive.css') }}\">
+\t<!-- Home -->
 
+\t<div class=\"home\">
+\t\t
+\t</div>
+
+\t<!-- Blog -->
+
+\t<div class=\"blog\">
+\t\t<div class=\"container\">
+\t\t\t<div class=\"row\">
+\t\t\t\t<div class=\"col\">
+\t\t\t\t\t<div class=\"welcome_title\">Welcome to our blog!</div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"row categories_row\">
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_1.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">travel</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_2.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">languages</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_3.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">cultures</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_4.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">fashion</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_5.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">cooking</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Category -->
+\t\t\t\t<div class=\"col-xl-2 col-lg-4 col-md-6 blog_category_col\">
+\t\t\t\t\t<a href=\"blog.html\">
+\t\t\t\t\t\t<div class=\"blog_category\">
+\t\t\t\t\t\t\t<div class=\"blog_category_image\"><img src=\"images/blog_6.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"blog_category_title\">hobbies</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t</div>
+
+\t\t\t<!-- Blog Posts -->
+\t\t\t
+\t\t\t<div class=\"row blog_row\">
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_7.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Design Better Forms</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_8.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Art Helps Healing</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_9.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Art Helps Healing</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_10.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Art Helps Healing</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_11.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Art Helps Healing</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t\t<!-- Blog Post -->
+\t\t\t\t<div class=\"col-lg-6\">
+\t\t\t\t\t<div class=\"blog_post\">
+\t\t\t\t\t\t<div class=\"blog_image\" style=\"background-image:url(images/blog_12.jpg)\"></div>
+\t\t\t\t\t\t<div class=\"blog_title_container\">
+\t\t\t\t\t\t\t<div class=\"blog_post_category\"><a href=\"#\">travel</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_title\"><a href=\"blog_single.html\">Art Helps Healing</a></div>
+\t\t\t\t\t\t\t<div class=\"blog_post_text\">
+\t\t\t\t\t\t\t\t<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<div class=\"read_more\"><a href=\"blog_single.html\">Read More <img src=\"images/right.png\" alt=\"\"></a></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+
+\t\t\t</div>
+
+\t\t\t<!-- Load More -->
+\t\t\t<div class=\"row\">
+\t\t\t\t<div class=\"col\">
+\t\t\t\t\t<div class=\"load_more_button\"><a href=\"#\">load more</a></div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</div>
+\t</div>
+\t    <script>
+\t\tdocument.getElementById('Blog-display').className += 'active';
+\t\t</script>
 {% endblock %}
 ", "blog/index.html.twig", "C:\\Users\\x\\Documents\\GitHub\\SchoolManagement-\\templates\\blog\\index.html.twig");
     }

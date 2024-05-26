@@ -73,12 +73,12 @@
 							</div>
 							<nav class="main_nav_contaner">
 								<ul class="main_nav">
-									<li id="Home-display"><a href="">Home</a></li>
-									<li id="Courses-display"><a href="">Courses</a></li>
-									<li id="Instructors-display"><a href="">Instructors</a></li>
+									<li id="Home-display"><a href="{{ path('app_home') }}">Home</a></li>
+									<li id="Courses-display"><a href="{{ path('app_blog') }}">Courses</a></li>
+									<li id="Instructors-display"><a href="{{ path('app_blog') }}">Instructors</a></li>
 									<li id="Events-display"><a href="#">Events</a></li>
 									<li id="Blog-display"><a href="{{ path('app_blog') }}">Blog</a></li>
-									<li id="Contact-display"><a href="">Contact</a></li>
+									<li id="Contact-display"><a href="{{ path('app_blog') }}">Contact</a></li>
 								</ul>
 							</nav>
 							<div class="header_content_right ml-auto text-right">
