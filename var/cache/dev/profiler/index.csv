@@ -1059,3 +1059,5 @@ d06e78,127.0.0.1,GET,https://127.0.0.1:8000/blog_single.html,1716750885,613928,4
 613928,127.0.0.1,GET,https://127.0.0.1:8000/blog_single.html,1716750885,,404,request
 99263c,127.0.0.1,GET,https://127.0.0.1:8000/,1716751000,,200,request
 34deac,127.0.0.1,GET,https://127.0.0.1:8000/blog,1716751002,,200,request
+6bc745,127.0.0.1,GET,https://127.0.0.1:8000/dashboard,1716753031,,302,request
+a6f079,127.0.0.1,GET,https://127.0.0.1:8000/dashboard?crudAction=index&crudControllerFqcn=App%5CController%5CAdmin%5CEtudiantCrudController,1716753032,,200,request
