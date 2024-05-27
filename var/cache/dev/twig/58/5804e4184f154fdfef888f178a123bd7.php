@@ -304,12 +304,28 @@ class __TwigTemplate_9b4c4f32a02536603d06e2dc0de33190 extends Template
 \t\t\t<div class=\"row instructors_row\">
 
 \t\t\t\t<!-- Instructor -->
+\t\t\t\t ";
+        // line 218
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["teachers"]) || array_key_exists("teachers", $context) ? $context["teachers"] : (function () { throw new RuntimeError('Variable "teachers" does not exist.', 218, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["teacher"]) {
+            // line 219
+            yield "          
+     
 \t\t\t\t<div class=\"col-lg-4 instructor_col\">
 \t\t\t\t\t<div class=\"instructor text-center\">
 \t\t\t\t\t\t<div class=\"instructor_image_container\">
-\t\t\t\t\t\t\t<div class=\"instructor_image\"><img src=\"images/instructor_1.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"instructor_image\"><img src=\"upload/images/Enseignants/";
+            // line 224
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["teacher"], "Image", [], "any", false, false, false, 224), "html", null, true);
+            yield "\" alt=\"\"></div>
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"instructor_name\"><a href=\"instructors.html\">Sarah Parker</a></div>
+\t\t\t\t\t\t<div class=\"instructor_name\"><a href=\"instructors.html\">";
+            // line 226
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["teacher"], "nom", [], "any", false, false, false, 226), "html", null, true);
+            yield " ";
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["teacher"], "prenom", [], "any", false, false, false, 226), "html", null, true);
+            yield "</a></div>
 \t\t\t\t\t\t<div class=\"instructor_title\">Teacher</div>
 \t\t\t\t\t\t<div class=\"instructor_text\">
 \t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor.</p>
@@ -323,48 +339,16 @@ class __TwigTemplate_9b4c4f32a02536603d06e2dc0de33190 extends Template
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
+\t\t\t\t   ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['teacher'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 241
+        yield "
+\t\t\t\t
 
-\t\t\t\t<!-- Instructor -->
-\t\t\t\t<div class=\"col-lg-4 instructor_col\">
-\t\t\t\t\t<div class=\"instructor text-center\">
-\t\t\t\t\t\t<div class=\"instructor_image_container\">
-\t\t\t\t\t\t\t<div class=\"instructor_image\"><img src=\"images/instructor_2.jpg\" alt=\"\"></div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"instructor_name\"><a href=\"instructors.html\">Sarah Parker</a></div>
-\t\t\t\t\t\t<div class=\"instructor_title\">Teacher</div>
-\t\t\t\t\t\t<div class=\"instructor_text\">
-\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor.</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"instructor_social\">
-\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-
-\t\t\t\t<!-- Instructor -->
-\t\t\t\t<div class=\"col-lg-4 instructor_col\">
-\t\t\t\t\t<div class=\"instructor text-center\">
-\t\t\t\t\t\t<div class=\"instructor_image_container\">
-\t\t\t\t\t\t\t<div class=\"instructor_image\"><img src=\"images/instructor_3.jpg\" alt=\"\"></div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"instructor_name\"><a href=\"instructors.html\">Sarah Parker</a></div>
-\t\t\t\t\t\t<div class=\"instructor_title\">Teacher</div>
-\t\t\t\t\t\t<div class=\"instructor_text\">
-\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor.</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"instructor_social\">
-\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t\t\t
 
 \t\t\t</div>
 \t\t</div>
@@ -619,7 +603,7 @@ class __TwigTemplate_9b4c4f32a02536603d06e2dc0de33190 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  95 => 7,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  348 => 241,  325 => 226,  320 => 224,  313 => 219,  309 => 218,  95 => 7,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -841,12 +825,15 @@ class __TwigTemplate_9b4c4f32a02536603d06e2dc0de33190 extends Template
 \t\t\t<div class=\"row instructors_row\">
 
 \t\t\t\t<!-- Instructor -->
+\t\t\t\t {% for teacher in teachers %}
+          
+     
 \t\t\t\t<div class=\"col-lg-4 instructor_col\">
 \t\t\t\t\t<div class=\"instructor text-center\">
 \t\t\t\t\t\t<div class=\"instructor_image_container\">
-\t\t\t\t\t\t\t<div class=\"instructor_image\"><img src=\"images/instructor_1.jpg\" alt=\"\"></div>
+\t\t\t\t\t\t\t<div class=\"instructor_image\"><img src=\"upload/images/Enseignants/{{teacher.Image}}\" alt=\"\"></div>
 \t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"instructor_name\"><a href=\"instructors.html\">Sarah Parker</a></div>
+\t\t\t\t\t\t<div class=\"instructor_name\"><a href=\"instructors.html\">{{ teacher.nom }} {{ teacher.prenom }}</a></div>
 \t\t\t\t\t\t<div class=\"instructor_title\">Teacher</div>
 \t\t\t\t\t\t<div class=\"instructor_text\">
 \t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor.</p>
@@ -860,48 +847,11 @@ class __TwigTemplate_9b4c4f32a02536603d06e2dc0de33190 extends Template
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
+\t\t\t\t   {% endfor %}
 
-\t\t\t\t<!-- Instructor -->
-\t\t\t\t<div class=\"col-lg-4 instructor_col\">
-\t\t\t\t\t<div class=\"instructor text-center\">
-\t\t\t\t\t\t<div class=\"instructor_image_container\">
-\t\t\t\t\t\t\t<div class=\"instructor_image\"><img src=\"images/instructor_2.jpg\" alt=\"\"></div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"instructor_name\"><a href=\"instructors.html\">Sarah Parker</a></div>
-\t\t\t\t\t\t<div class=\"instructor_title\">Teacher</div>
-\t\t\t\t\t\t<div class=\"instructor_text\">
-\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor.</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"instructor_social\">
-\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t\t\t
 
-\t\t\t\t<!-- Instructor -->
-\t\t\t\t<div class=\"col-lg-4 instructor_col\">
-\t\t\t\t\t<div class=\"instructor text-center\">
-\t\t\t\t\t\t<div class=\"instructor_image_container\">
-\t\t\t\t\t\t\t<div class=\"instructor_image\"><img src=\"images/instructor_3.jpg\" alt=\"\"></div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"instructor_name\"><a href=\"instructors.html\">Sarah Parker</a></div>
-\t\t\t\t\t\t<div class=\"instructor_title\">Teacher</div>
-\t\t\t\t\t\t<div class=\"instructor_text\">
-\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor.</p>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class=\"instructor_social\">
-\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></a></li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
+\t\t\t\t
 
 \t\t\t</div>
 \t\t</div>
@@ -1127,6 +1077,6 @@ class __TwigTemplate_9b4c4f32a02536603d06e2dc0de33190 extends Template
 
 {% endblock %}
 
-", "home/index.html.twig", "C:\\Users\\x\\Documents\\GitHub\\SchoolManagement-\\templates\\home\\index.html.twig");
+", "home/index.html.twig", "C:\\xampp\\htdocs\\SchoolManagement-\\templates\\home\\index.html.twig");
     }
 }

@@ -513,6 +513,6 @@ class __TwigTemplate_956cb310e2083be93b0fda5baf0a8839 extends Template
 \t\tdocument.getElementById('Blog-display').className += 'active';
 \t\t</script>
 {% endblock %}
-", "blog/index.html.twig", "C:\\Users\\x\\Documents\\GitHub\\SchoolManagement-\\templates\\blog\\index.html.twig");
+", "blog/index.html.twig", "C:\\xampp\\htdocs\\SchoolManagement-\\templates\\blog\\index.html.twig");
     }
 }

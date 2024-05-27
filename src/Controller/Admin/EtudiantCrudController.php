@@ -49,4 +49,5 @@ class EtudiantCrudController extends AbstractCrudController
         parent::persistEntity($em,$entityInstance);
         
     }
+    
 }

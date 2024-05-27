@@ -680,6 +680,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         <script src=\"{{ asset('plugins/parallax-js-master/parallax.min.js') }}\"></script>
         <script src=\"{{ asset('js/blog.js') }}\"></script>
 </html>
-", "base.html.twig", "C:\\Users\\x\\Documents\\GitHub\\SchoolManagement-\\templates\\base.html.twig");
+", "base.html.twig", "C:\\xampp\\htdocs\\SchoolManagement-\\templates\\base.html.twig");
     }
 }
