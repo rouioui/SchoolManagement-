@@ -32,7 +32,8 @@ class NoteCrudController extends AbstractCrudController
             BooleanField::new('active'),
             AssociationField::new('Etudiant'),
             AssociationField::new('Niveau'),
-            AssociationField::new('Cours')
+            AssociationField::new('Cours'),
+            AssociationField::new('NumberExams')
 
         ];
     }

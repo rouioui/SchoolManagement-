@@ -1,469 +1,253 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Bonjour HomeController!{% endblock %}
 
 {% block body %}
 <link rel="stylesheet" type="text/css" href="{{ asset('styles/main_styles.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ asset('styles/responsive.css') }}">
+
 <div class="home">
-        
-		<div class="home_background" style="background-image: url(images/index_background.jpg);"></div>
-		<div class="home_content">
-			<div class="container">
-				<div class="row">
-					<div class="col text-center">
-						<h1 class="home_title">Learn Languages Easily</h1>
-						<div class="home_button trans_200"><a href="#">get started</a></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="home_background mt-5" style="background-image: url('images/tetouanEns.jpg');background-size: cover; opacity:0.85;"></div>
+    <div class="home_content">
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h1 class="home_title" style="">
+Bienvenue sur le site officiel de l'École Normale Supérieure de Tétouan.</h1>
+                    <div class="home_button trans_200"style="border-radius:10px;"><a href="{{ path('app_contact') }}">Contactez-nous</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-	<!-- Language -->
+<!-- Cours -->
+<div class="courses">
+    <div class="courses_background"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="section_title text-center">Notre Départements</h2>
+            </div>
+        </div>
+        <div class="row courses_row">
 
-	<div class="language">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="language_slider_container">
-						
-						<!-- Language Slider -->
+           
 
-						<div class="owl-carousel owl-theme language_slider">
+           
+    {% for Departement in Departements %}
+            <!-- Cours -->
+            <div class="col-lg-4 course_col">
+                <div class="course">
+                    <div class="course_image"><img src="upload/images/Depatements/{{ Departement.images}}" alt=""></div>
+                    <div class="course_body">
+                        <div class="course_title"><a href="course.html">{{ Departement.name}}</a></div>
+                        <div class="course_info">
+                           
+ <a href="instructors.html"  style="color:black;"> chef Departement : {{ Departement.getChefDepartement()}}</a></li><li><a href="#" style="color:black;"> {% for course in Departement.ChefDepartement.getCours() %}
+             prof : {{course.NomCour}}
+        {% endfor %}</a>         
+                        </div>
+                        <div class="course_text">
+                            <p>{{ Departement.description}}</p>
+                        </div>
+                    </div>
+                    <div class="course_footer d-flex flex-row align-items-center justify-content-start">
+                        <div class="course_students"><i class="fa fa-user" aria-hidden="true"></i><span>{{ Departement.enseignants.count }}</span></div>
+                        <div class="course_rating ml-auto"><i class="fa fa-star" aria-hidden="true"></i><span>4,5</span></div>
+                        <div class="course_mark trans_200"><a href="#">Voir</a></div>
+                    </div>
+                </div>
+            </div>
+             {% endfor %}
 
-							<!-- Flag -->
-							<div class="owl-item language_item">
-								<a href="#">
-									<div class="flag"><img src="images/Ukrainian.svg" alt=""></div>
-									<div class="lang_name">Ukrainian</div>
-								</a>
-							</div>
 
-							<!-- Flag -->
-							<div class="owl-item language_item">
-								<a href="#">
-									<div class="flag"><img src="images/Japanese.svg" alt=""></div>
-									<div class="lang_name">Japanese</div>
-								</a>
-							</div>
 
-							<!-- Flag -->
-							<div class="owl-item language_item">
-								<a href="#">
-									<div class="flag"><img src="images/Lithuanian.svg" alt=""></div>
-									<div class="lang_name">Lithuanian</div>
-								</a>
-							</div>
+        </div>
+    </div>
+</div>
 
-							<!-- Flag -->
-							<div class="owl-item language_item">
-								<a href="#">
-									<div class="flag"><img src="images/Swedish.svg" alt=""></div>
-									<div class="lang_name">Swedish</div>
-								</a>
-							</div>
+<!-- Instructeurs -->
+<div class="instructors">
+    <div class="instructors_background" style="background-image:url(images/instructors_background.png)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="section_title text-center">Les meilleurs tuteurs en ville</h2>
+            </div>
+        </div>
+        <div class="row instructors_row">
+            {% for teacher in teachers %}
+            <!-- Instructeur -->
+            <div class="col-lg-4 instructor_col">
+                <div class="instructor text-center">
+                    <div class="instructor_image_container">
+                        <div class="instructor_image"><img src="upload/images/Enseignants/{{ teacher.Image }}" alt=""></div>
+                    </div>
+                    <div class="instructor_name"><a href="instructors.html">{{ teacher.nom }} {{ teacher.prenom }}</a></div>
+                    <div class="instructor_title">
+                     {% for course in teacher.getCours()%}
+                     {{course.NomCour}}
 
-							<!-- Flag -->
-							<div class="owl-item language_item">
-								<a href="#">
-									<div class="flag"><img src="images/English.svg" alt=""></div>
-									<div class="lang_name">English</div>
-								</a>
-							</div>
 
-							<!-- Flag -->
-							<div class="owl-item language_item">
-								<a href="#">
-									<div class="flag"><img src="images/Italian.svg" alt=""></div>
-									<div class="lang_name">Italian</div>
-								</a>
-							</div>
+                     {% endfor %}
+                    
+                    
+                    
+                    
+                    </div>
+                    <div class="instructor_text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor.</p>
+                    </div>
+                    <div class="instructor_social">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
-							<!-- Flag -->
-							<div class="owl-item language_item">
-								<a href="#">
-									<div class="flag"><img src="images/Chinese.svg" alt=""></div>
-									<div class="lang_name">Chinese</div>
-								</a>
-							</div>
+<!-- Enregistrement -->
+<div class="register">
+    <div class="container">
+        <div class="row">
 
-							<!-- Flag -->
-							<div class="owl-item language_item">
-								<a href="#">
-									<div class="flag"><img src="images/French.svg" alt=""></div>
-									<div class="lang_name">French</div>
-								</a>
-							</div>
+            <!-- Formulaire d'enregistrement -->
+            <div class="col-lg-6">
+                <div class="register_form_container">
+                    <div class="register_form_title">Ajouter un message</div>
+                    {{ form_start(form, {'attr': {'id': 'register_form', 'class': 'register_form'}}) }}
+                    <div class="row register_row">
+                        <div class="col-lg-6 register_col">
+                            {{ form_widget(form.name, {'attr': {'class': 'form_input', 'placeholder': 'Nom', 'required': 'required'}}) }}
+                        </div>
+                        <div class="col-lg-6 register_col">
+                            {{ form_widget(form.phone, {'attr': {'class': 'form_input', 'placeholder': 'Téléphone'}}) }}
+                        </div>
+                        <div class="col-lg-12 register_col">
+                            {{ form_widget(form.email, {'attr': {'class': 'form_input', 'placeholder': 'Email', 'required': 'required'}}) }}
+                        </div>
+                        <div class="col-lg-12 register_col">
+                            {{ form_widget(form.message, {'attr': {'class': 'form_input', 'placeholder': 'Message', 'style': 'height: 100px;'}}) }}
+                        </div>
+                        <div class="col">
+                            {{ form_widget(form.createdAt, {'attr': {'style': 'display:none;'}}) }}
+                            <button type="submit" class="form_button trans_200">Envoyer le message maintenant !</button>
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
 
-							<!-- Flag -->
-							<div class="owl-item language_item">
-								<a href="#">
-									<div class="flag"><img src="images/German.svg" alt=""></div>
-									<div class="lang_name">German</div>
-								</a>
-							</div>
+            <!-- Timer d'enregistrement -->
 
-						</div>
+            <div class="col-lg-6">
+                <div class="register_timer_container">
+                    <div class="register_timer_title">Inscrivez-vous maintenant</div>
+                    <div class="register_timer_text">
+                        <p>Inscrivez-vous maintenant, et notre équipe vous contactera rapidement.</p>
+                    </div>
 
-						<div class="lang_nav lang_prev"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
-						<div class="lang_nav lang_next"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    <div class="timer_container">
+                        <ul class="timer_list">
+                            <li><div id="day" class="timer_num">+500</div><div class="timer_ss">Departement</div></li>
+                            <li><div id="hour" class="timer_num">+50</div><div class="timer_ss">ENSEIGNANTS</div></li>
+                            <li><div id="minute" class="timer_num">+140</div><div class="timer_ss">COURS</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-	<!-- Courses -->
+<!-- Événements -->
+<div class="events">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2 class="section_title text-center">Événements à venir</h2>
+            </div>
+        </div>
+        <div class="row events_row">
+            {% for Event in events %}
+            <!-- Événement -->
+            <div class="col-lg-4 event_col">
+                <div class="event">
+                    <div class="event_image"><img src="upload/images/Events/{{ Event.Image }}" alt=""></div>
+                    <div class="event_date d-flex flex-column align-items-center justify-content-center">
+                        <div class="event_day" style="font-size:25px">{{ Event.date | date('m/d') }}</div>
+                        <div class="event_month"> {{ Event.date |  date('H:i') }}</div>
+                    </div>
+                    <div class="event_body d-flex flex-row align-items-center justify-content-start">
+                        <div class="event_title mr-3"><a href="#" style="font-size:15px;">{{ Event.name }}</a></div>
+                       
+                        <div class="event_tag ml-auto">Gratuit</div>
+                    </div>
+                      <a href="instructors.html"  style="color:black;"> {{Event.Content}}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
 
-	<div class="courses">
-		<div class="courses_background"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h2 class="section_title text-center">Popular Online Courses</h2>
-				</div>
-			</div>
-			<div class="row courses_row">
+<!-- Blog -->
+<div class="blog">
+    <div class="container">
+        <div class="row row-lg-eq-height">
 
-				<!-- Course -->
-				<div class="col-lg-4 course_col">
-					<div class="course">
-						<div class="course_image"><img src="images/course_1.jpg" alt=""></div>
-						<div class="course_body">
-							<div class="course_title"><a href="course.html">Vocabulary</a></div>
-							<div class="course_info">
-								<ul>
-									<li><a href="instructors.html">Sarah Parker</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>
-							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla.</p>
-							</div>
-						</div>
-						<div class="course_footer d-flex flex-row align-items-center justify-content-start">
-							<div class="course_students"><i class="fa fa-user" aria-hidden="true"></i><span>10</span></div>
-							<div class="course_rating ml-auto"><i class="fa fa-star" aria-hidden="true"></i><span>4,5</span></div>
-							<div class="course_mark course_free trans_200"><a href="#">Free</a></div>
-						</div>
-					</div>
-				</div>
+            <!-- Blog à gauche -->
+            <div class="col-lg-6">
+                <div class="blog_left">
+                    <div class="blog_title">Bienvenue sur le blog de notre école !</div>
+                    <div class="blog_text">
+                        <p>Explorez avec nous les actualités, les événements passionnants, les réussites des élèves, et les initiatives éducatives qui font de notre école un lieu dynamique d'apprentissage et de croissance. Plongez dans notre communauté scolaire et découvrez les histoires inspirantes qui enrichissent notre parcours éducatif.</p>
+                    </div>
+                    <div class="blog_categories">
+                        <div class="row categories_row">
+                            {% for CategorieBlog in blogsCategorie %}
+                            <!-- Catégorie -->
+                            <div class="col-md-4 blog_category_col">
+                                <a href="{{ path('app_blog') }}">
+                                    <div class="blog_category">
+                                        <div class="blog_category_image"><img src="upload/images/BlogsCategorie/{{ CategorieBlog.img }}" alt=""></div>
+                                        <div class="blog_category_title">{{ CategorieBlog.name }}</div>
+                                    </div>
+                                </a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-				<!-- Course -->
-				<div class="col-lg-4 course_col">
-					<div class="course">
-						<div class="course_image"><img src="images/course_2.jpg" alt=""></div>
-						<div class="course_body">
-							<div class="course_title"><a href="course.html">Vocabulary</a></div>
-							<div class="course_info">
-								<ul>
-									<li><a href="instructors.html">Sarah Parker</a></li>
-									<li><a href="#">Spanish</a></li>
-								</ul>
-							</div>
-							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla.</p>
-							</div>
-						</div>
-						<div class="course_footer d-flex flex-row align-items-center justify-content-start">
-							<div class="course_students"><i class="fa fa-user" aria-hidden="true"></i><span>10</span></div>
-							<div class="course_rating ml-auto"><i class="fa fa-star" aria-hidden="true"></i><span>4,5</span></div>
-							<div class="course_mark course_free trans_200"><a href="#">Free</a></div>
-						</div>
-					</div>
-				</div>
+            <!-- Blog à droite -->
+            <div class="col-lg-6">
+                <div class="blog_right">
+                    <div class="blog_image" style="background-image:url(upload/images/Blogs/{{ blog.image }})"></div>
+                    <div class="blog_title_container">
+                        <div class="blog_right_category"><a href="#">{{ blog.CategorieBlog.name }}</a></div>
+                        <div class="blog_right_title"><a href="blog_single.html">{{ blog.name }}</a></div>
+                        <div class="blog_right_text">
+                            <p>{{ blog.introduction | raw }}</p>
+                        </div>
+                        <div class="read_more"><a href="{{ path('app_blog') }}">Lire la suite <img src="images/right.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-				<!-- Course -->
-				<div class="col-lg-4 course_col">
-					<div class="course">
-						<div class="course_image"><img src="images/course_3.jpg" alt=""></div>
-						<div class="course_body">
-							<div class="course_title"><a href="course.html">Vocabulary</a></div>
-							<div class="course_info">
-								<ul>
-									<li><a href="instructors.html">Sarah Parker</a></li>
-									<li><a href="#">English</a></li>
-								</ul>
-							</div>
-							<div class="course_text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla.</p>
-							</div>
-						</div>
-						<div class="course_footer d-flex flex-row align-items-center justify-content-start">
-							<div class="course_students"><i class="fa fa-user" aria-hidden="true"></i><span>10</span></div>
-							<div class="course_rating ml-auto"><i class="fa fa-star" aria-hidden="true"></i><span>4,5</span></div>
-							<div class="course_mark trans_200"><a href="#">$45</a></div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Instructors -->
-
-	<div class="instructors">
-		<div class="instructors_background" style="background-image:url(images/instructors_background.png)"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h2 class="section_title text-center">The Best Tutors in Town</h2>
-				</div>
-			</div>
-			<div class="row instructors_row">
-
-				<!-- Instructor -->
-				 {% for teacher in teachers %}
-          
-     
-				<div class="col-lg-4 instructor_col">
-					<div class="instructor text-center">
-						<div class="instructor_image_container">
-							<div class="instructor_image"><img src="upload/images/Enseignants/{{teacher.Image}}" alt=""></div>
-						</div>
-						<div class="instructor_name"><a href="instructors.html">{{ teacher.nom }} {{ teacher.prenom }}</a></div>
-						<div class="instructor_title">Teacher</div>
-						<div class="instructor_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor.</p>
-						</div>
-						<div class="instructor_social">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				   {% endfor %}
-
-				
-
-				
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Register -->
-
-	<div class="register">
-		<div class="container">
-			<div class="row">
-				
-				<!-- Register Form -->
-
-				<div class="col-lg-6">
-					<div class="register_form_container">
-						<div class="register_form_title">Courses For Free</div>
-						<form action="#" id="register_form" class="register_form">
-							<div class="row register_row">
-								<div class="col-lg-6 register_col">
-									<input type="text" class="form_input" placeholder="Name" required="required">
-								</div>
-								<div class="col-lg-6 register_col">
-									<input type="email" class="form_input" placeholder="Email" required="required">
-								</div>
-								<div class="col-lg-6 register_col">
-									<input type="tel" class="form_input" placeholder="Phone">
-								</div>
-								<div class="col-lg-6 register_col">
-									<input type="url" class="form_input" placeholder="Site">
-								</div>
-								<div class="col">
-									<button type="submit" class="form_button trans_200">get it now</button>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-
-				<!-- Register Timer -->
-
-				<div class="col-lg-6">
-					<div class="register_timer_container">
-						<div class="register_timer_title">Register Now</div>
-						<div class="register_timer_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor.</p>
-						</div>
-						<div class="timer_container">
-							<ul class="timer_list">
-								<li><div id="day" class="timer_num">00</div><div class="timer_ss">days</div></li>
-								<li><div id="hour" class="timer_num">00</div><div class="timer_ss">hours</div></li>
-								<li><div id="minute" class="timer_num">00</div><div class="timer_ss">minutes</div></li>
-								<li><div id="second" class="timer_num">00</div><div class="timer_ss">seconds</div></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Events -->
-
-	<div class="events">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h2 class="section_title text-center">Upcoming Events</h2>
-				</div>
-			</div>
-			<div class="row events_row">
-				
-				<!-- Event -->
-				<div class="col-lg-4 event_col">
-					<div class="event">
-						<div class="event_image"><img src="images/event_1.jpg" alt=""></div>
-						<div class="event_date d-flex flex-column align-items-center justify-content-center">
-							<div class="event_day">26</div>
-							<div class="event_month">aug</div>
-						</div>
-						<div class="event_body d-flex flex-row align-items-center justify-content-start">
-							<div class="event_title"><a href="#">Networking Day</a></div>
-							<div class="event_tag ml-auto">Free</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Event -->
-				<div class="col-lg-4 event_col">
-					<div class="event">
-						<div class="event_image"><img src="images/event_2.jpg" alt=""></div>
-						<div class="event_date d-flex flex-column align-items-center justify-content-center">
-							<div class="event_day">26</div>
-							<div class="event_month">aug</div>
-						</div>
-						<div class="event_body d-flex flex-row align-items-center justify-content-start">
-							<div class="event_title"><a href="#">Networking Day</a></div>
-							<div class="event_tag ml-auto">Free</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Event -->
-				<div class="col-lg-4 event_col">
-					<div class="event">
-						<div class="event_image"><img src="images/event_3.jpg" alt=""></div>
-						<div class="event_date d-flex flex-column align-items-center justify-content-center">
-							<div class="event_day">26</div>
-							<div class="event_month">aug</div>
-						</div>
-						<div class="event_body d-flex flex-row align-items-center justify-content-start">
-							<div class="event_title"><a href="#">Networking Day</a></div>
-							<div class="event_tag ml-auto">Free</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-	<!-- Blog -->
-
-	<div class="blog">
-		<div class="container">
-			<div class="row row-lg-eq-height">
-				
-				<!-- Blog Left -->
-				<div class="col-lg-6">
-					<div class="blog_left">
-						<div class="blog_title">From Our Blog</div>
-						<div class="blog_text">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce enim nulla, mollis eu metus in, sagittis fringilla tortor.</p>
-						</div>
-						<div class="blog_categories">
-							<div class="row categories_row">
-
-								<!-- Category -->
-								<div class="col-md-4 blog_category_col">
-									<a href="blog.html">
-										<div class="blog_category">
-											<div class="blog_category_image"><img src="images/blog_1.jpg" alt=""></div>
-											<div class="blog_category_title">travel</div>
-										</div>
-									</a>
-								</div>
-
-								<!-- Category -->
-								<div class="col-md-4 blog_category_col">
-									<a href="blog.html">
-										<div class="blog_category">
-											<div class="blog_category_image"><img src="images/blog_2.jpg" alt=""></div>
-											<div class="blog_category_title">languages</div>
-										</div>
-									</a>
-								</div>
-
-								<!-- Category -->
-								<div class="col-md-4 blog_category_col">
-									<a href="blog.html">
-										<div class="blog_category">
-											<div class="blog_category_image"><img src="images/blog_3.jpg" alt=""></div>
-											<div class="blog_category_title">cultures</div>
-										</div>
-									</a>
-								</div>
-
-								<!-- Category -->
-								<div class="col-md-4 blog_category_col">
-									<a href="blog.html">
-										<div class="blog_category">
-											<div class="blog_category_image"><img src="images/blog_4.jpg" alt=""></div>
-											<div class="blog_category_title">fashion</div>
-										</div>
-									</a>
-								</div>
-
-								<!-- Category -->
-								<div class="col-md-4 blog_category_col">
-									<a href="blog.html">
-										<div class="blog_category">
-											<div class="blog_category_image"><img src="images/blog_5.jpg" alt=""></div>
-											<div class="blog_category_title">cooking</div>
-										</div>
-									</a>
-								</div>
-
-								<!-- Category -->
-								<div class="col-md-4 blog_category_col">
-									<a href="blog.html">
-										<div class="blog_category">
-											<div class="blog_category_image"><img src="images/blog_6.jpg" alt=""></div>
-											<div class="blog_category_title">hobbies</div>
-										</div>
-									</a>
-								</div>
-
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Blog Right -->
-
-				<div class="col-lg-6">
-					<div class="blog_right">
-						<div class="blog_image" style="background-image:url(images/blog_7.jpg)"></div>
-						<div class="blog_title_container">
-							<div class="blog_right_category"><a href="#">travel</a></div>
-							<div class="blog_right_title"><a href="blog_single.html">Design Better Forms</a></div>
-							<div class="blog_right_text">
-								<p>Whether it is a signup flow, a multi-view stepper, or a monotonous data entry interface, forms are one of the most important components of digital product design.</p>
-							</div>
-							<div class="read_more"><a href="blog_single.html">Read More <img src="images/right.png" alt=""></a></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-     	<script>
-		document.getElementById('Home-display').className += 'active';
-		</script>
+<script>
+    document.getElementById('Home-display').className += 'active';
+</script>
 
 {% endblock %}
-

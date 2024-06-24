@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Enseignant;
 use Doctrine\ORM\EntityManagerInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -31,7 +32,9 @@ class EnseignantCrudController extends AbstractCrudController
             TextField::new('cin'),
             ImageField::new('image')->setBasePath(self::ENSEIGNANT_BASE_PATH)
             ->setUploadDir(self::ENSEIGNANT_UPLOAD_DIR)->setSortable(false),
-            BooleanField::new('active')
+            BooleanField::new('active'),
+            AssociationField::new('Departement')
+            
         ];
     }
  

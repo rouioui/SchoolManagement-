@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\EtudiantRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: EtudiantRepository::class)]
@@ -46,6 +47,12 @@ class Etudiant
      */
     #[ORM\OneToMany(targetEntity: Note::class, mappedBy: 'Etudiant')]
     private Collection $notes;
+
+    #[ORM\Column(length: 10)]
+    private ?string $cin = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $dateNaissance = null;
 
     public function __construct()
     {
@@ -187,4 +194,32 @@ class Etudiant
         $nameEtudiant="$this->nom $this->prenom";
         return $nameEtudiant;
     }
+
+    public function getCin(): ?string
+    {
+        return $this->cin;
+    }
+
+    public function setCin(string $cin): static
+    {
+        $this->cin = $cin;
+
+        return $this;
+    }
+
+    public function getDateNaissance(): ?\DateTimeInterface
+    {
+        return $this->dateNaissance;
+    }
+
+    public function setDateNaissance(\DateTimeInterface $dateNaissance): static
+    {
+        $this->dateNaissance = $dateNaissance;
+
+        return $this;
+    }
+
+   
+
+   
 }

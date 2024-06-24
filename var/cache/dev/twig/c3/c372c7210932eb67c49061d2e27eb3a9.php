@@ -88,76 +88,65 @@ class __TwigTemplate_aa800e80b1a6d0a2b29c3e15c079907d extends Template
 
         // line 6
         yield "
-
-
-
- <body oncontextmenu='return false' class='snippet-body'>
-                            <div class=\"container\">
-    <div class=\"row\">
-        <div class=\"offset-md-2 col-lg-5 col-md-7 offset-lg-3 offset-md-3\">
-            <div class=\"panel border bg-white\">
-                <div class=\"panel-heading\">
-                    <h3 class=\"pt-3 font-weight-bold\">Login</h3>
-                </div>
-                <div class=\"panel-body p-3\">
-                   <form method=\"post\">
-                   <div class=\"row\">
-    ";
-        // line 21
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 21, $this->source); })())) {
-            // line 22
+<div class=\"container mt-5\">
+    <div class=\"row \">
+        <div class=\"col-md-9 mt-5 mb-5 offset-md-1\">
+            <div class=\"register_form_container mt-5 \">
+          
+                <div class=\"register_form_title\" style=\"\">Login</div>
+               
+                 ";
+        // line 14
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 14, $this->source); })())) {
+            // line 15
             yield "        <div class=\"alert alert-danger\">";
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 22, $this->source); })()), "messageKey", [], "any", false, false, false, 22), CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 22, $this->source); })()), "messageData", [], "any", false, false, false, 22), "security"), "html", null, true);
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 15, $this->source); })()), "messageKey", [], "any", false, false, false, 15), CoreExtension::getAttribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 15, $this->source); })()), "messageData", [], "any", false, false, false, 15), "security"), "html", null, true);
             yield "</div>
     ";
         }
-        // line 24
+        // line 17
         yield "
     ";
-        // line 25
-        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "user", [], "any", false, false, false, 25)) {
-            // line 26
+        // line 18
+        if (CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", [], "any", false, false, false, 18)) {
+            // line 19
             yield "        <div class=\"mb-3\">
             You are logged in as ";
-            // line 27
-            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 27, $this->source); })()), "user", [], "any", false, false, false, 27), "userIdentifier", [], "any", false, false, false, 27), "html", null, true);
+            // line 20
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "userIdentifier", [], "any", false, false, false, 20), "html", null, true);
             yield ", <a href=\"";
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             yield "\">Logout</a>
         </div>
     ";
         }
-        // line 30
-        yield "                        <div class=\"form-group py-2\">
-                            <div class=\"input-field\"> <span class=\"fa-solid fa-lock p-2\"></span> <input type=\"text\" placeholder=\"Username or Email\" required value=\"";
-        // line 31
-        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 31, $this->source); })()), "html", null, true);
-        yield "\" name=\"email\" id=\"inputEmail\"  autocomplete=\"email\" required autofocus> </div>
+        // line 23
+        yield "                <form   method=\"POST\">
+                    <div class=\"row register_row\">
+                        <div class=\"col-lg-12 register_col\">
+                            <input type=\"text\" class=\"form_input\" placeholder=\"Email\" required=\"required\"  required value=\"";
+        // line 26
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 26, $this->source); })()), "html", null, true);
+        yield "\" name=\"email\" id=\"inputEmail\"  autocomplete=\"email\" required autofocus>
                         </div>
-                        
-                        
-                        <div class=\"form-group py-2 \">
-                            <div class=\"input-field\"> <span class=\"\"></span> <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\"  required autofocus placeholder=\"password\"> <button class=\"btn bg-white text-muted\"> <span class=\"far fa-eye-slash\"></span> </button> </div>
+                        <div class=\"col-lg-12 register_col\">
+                            <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form_input\"  required=\"required\" autofocus placeholder=\"password\">
                         </div>
                          <input type=\"hidden\" name=\"_csrf_token\"
            value=\"";
-        // line 39
+        // line 32
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         yield "\">
-    <div class=\"form-inline\"> <input type=\"checkbox\" name=\"remember\" id=\"remember\"> <label for=\"remember\" class=\"text-muted\">Remember me</label> <a href=\"#\" id=\"forgot\" class=\"font-weight-bold\">Forgot password?</a> </div>
-                        <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign in
-    </button>
-                        
-                    </form>
-                   
- </div>
-                
-
-               
+                        <div class=\"col\">
+                            <button type=\"submit\" class=\"form_button trans_200\">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
+
 
                             
                       
@@ -192,7 +181,7 @@ class __TwigTemplate_aa800e80b1a6d0a2b29c3e15c079907d extends Template
      */
     public function getDebugInfo()
     {
-        return array (  145 => 39,  134 => 31,  131 => 30,  123 => 27,  120 => 26,  118 => 25,  115 => 24,  109 => 22,  107 => 21,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  138 => 32,  129 => 26,  124 => 23,  116 => 20,  113 => 19,  111 => 18,  108 => 17,  102 => 15,  100 => 14,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -203,21 +192,14 @@ class __TwigTemplate_aa800e80b1a6d0a2b29c3e15c079907d extends Template
 
 {% block body %}
 
-
-
-
- <body oncontextmenu='return false' class='snippet-body'>
-                            <div class=\"container\">
-    <div class=\"row\">
-        <div class=\"offset-md-2 col-lg-5 col-md-7 offset-lg-3 offset-md-3\">
-            <div class=\"panel border bg-white\">
-                <div class=\"panel-heading\">
-                    <h3 class=\"pt-3 font-weight-bold\">Login</h3>
-                </div>
-                <div class=\"panel-body p-3\">
-                   <form method=\"post\">
-                   <div class=\"row\">
-    {% if error %}
+<div class=\"container mt-5\">
+    <div class=\"row \">
+        <div class=\"col-md-9 mt-5 mb-5 offset-md-1\">
+            <div class=\"register_form_container mt-5 \">
+          
+                <div class=\"register_form_title\" style=\"\">Login</div>
+               
+                 {% if error %}
         <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
@@ -226,30 +208,26 @@ class __TwigTemplate_aa800e80b1a6d0a2b29c3e15c079907d extends Template
             You are logged in as {{ app.user.userIdentifier }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
         </div>
     {% endif %}
-                        <div class=\"form-group py-2\">
-                            <div class=\"input-field\"> <span class=\"fa-solid fa-lock p-2\"></span> <input type=\"text\" placeholder=\"Username or Email\" required value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\"  autocomplete=\"email\" required autofocus> </div>
+                <form   method=\"POST\">
+                    <div class=\"row register_row\">
+                        <div class=\"col-lg-12 register_col\">
+                            <input type=\"text\" class=\"form_input\" placeholder=\"Email\" required=\"required\"  required value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\"  autocomplete=\"email\" required autofocus>
                         </div>
-                        
-                        
-                        <div class=\"form-group py-2 \">
-                            <div class=\"input-field\"> <span class=\"\"></span> <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\"  required autofocus placeholder=\"password\"> <button class=\"btn bg-white text-muted\"> <span class=\"far fa-eye-slash\"></span> </button> </div>
+                        <div class=\"col-lg-12 register_col\">
+                            <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form_input\"  required=\"required\" autofocus placeholder=\"password\">
                         </div>
                          <input type=\"hidden\" name=\"_csrf_token\"
            value=\"{{ csrf_token('authenticate') }}\">
-    <div class=\"form-inline\"> <input type=\"checkbox\" name=\"remember\" id=\"remember\"> <label for=\"remember\" class=\"text-muted\">Remember me</label> <a href=\"#\" id=\"forgot\" class=\"font-weight-bold\">Forgot password?</a> </div>
-                        <button class=\"btn btn-lg btn-primary\" type=\"submit\">
-        Sign in
-    </button>
-                        
-                    </form>
-                   
- </div>
-                
-
-               
+                        <div class=\"col\">
+                            <button type=\"submit\" class=\"form_button trans_200\">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
+
 
                             
                       

@@ -92,26 +92,11 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"col\">
 \t\t\t\t\t\t\t<div class=\"top_bar_content d-flex flex-row align-items-center justify-content-start\">
-\t\t\t\t\t\t\t\t<div class=\"top_bar_phone\"><span class=\"top_bar_title\">phone:</span>+44 300 303 0266</div>
+\t\t\t\t\t\t\t\t<div class=\"top_bar_phone\"><span class=\"top_bar_title\">phone:</span>06 16 nmrti makat3tach</div>
 \t\t\t\t\t\t\t\t<div class=\"top_bar_right ml-auto\">
 
 \t\t\t\t\t\t\t\t\t<!-- Language -->
-\t\t\t\t\t\t\t\t\t<div class=\"top_bar_lang\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"top_bar_title\">site language:</span>
-\t\t\t\t\t\t\t\t\t\t<ul class=\"lang_list\">
-\t\t\t\t\t\t\t\t\t\t\t<li class=\"hassubs\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">English<i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Ukrainian</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Japanese</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Lithuanian</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Swedish</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Italian</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t\t</div>
-
+\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t<!-- Social -->
 \t\t\t\t\t\t\t\t\t<div class=\"top_bar_social\">
 \t\t\t\t\t\t\t\t\t\t<span class=\"top_bar_title social_title\">follow us</span>
@@ -130,39 +115,72 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t\t</div>
 
 \t\t<!-- Header Content -->
-\t\t<div class=\"header_container\">
+\t\t<div class=\"header_container\"> \t
 \t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"row\">
 \t\t\t\t\t<div class=\"col\">
 \t\t\t\t\t\t<div class=\"header_content d-flex flex-row align-items-center justify-content-start\">
 \t\t\t\t\t\t\t<div class=\"logo_container mr-auto\">
-\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t<div class=\"logo_text\">Lingua</div>
+\t\t\t\t\t\t\t\t<a href=\"";
+        // line 55
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+        yield "\">
+\t\t\t\t\t\t\t\t\t<div class=\"logo_text\"><img src=\"";
+        // line 56
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/ens logo .png"), "html", null, true);
+        yield "\"width=\"150px\" alt=\"\"></div>
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<nav class=\"main_nav_contaner\">
 \t\t\t\t\t\t\t\t<ul class=\"main_nav\">
 \t\t\t\t\t\t\t\t\t<li id=\"Home-display\"><a href=\"";
-        // line 76
+        // line 61
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
         yield "\">Home</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Courses-display\"><a href=\"";
-        // line 77
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
-        yield "\">Courses</a></li>
+\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t<li id=\"Instructors-display\"><a href=\"";
-        // line 78
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
+        // line 63
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_enseignants");
         yield "\">Instructors</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Events-display\"><a href=\"#\">Events</a></li>
+\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t<li id=\"Blog-display\"><a href=\"";
-        // line 80
+        // line 65
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
         yield "\">Blog</a></li>
 \t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"";
-        // line 81
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
+        // line 66
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_contact");
         yield "\">Contact</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"";
+        // line 67
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_departements");
+        yield "\">Département</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"";
+        // line 68
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_blog");
+        yield "\">
+\t\t\t\t\t\t\t\t\t<div class=\"top_bar_lang\">
+\t\t\t\t\t\t\t\t\t\t<ul class=\"lang_list\">
+\t\t\t\t\t\t\t\t\t\t\t<li class=\"hassubs\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Espace<i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i></a>
+\t\t\t\t\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
+        // line 74
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+        yield "\">Admin</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
+        // line 75
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("etudiant_search");
+        yield "\">Etudiants</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t</a></li>
+
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</nav>
 \t\t\t\t\t\t\t<div class=\"header_content_right ml-auto text-right\">
@@ -179,7 +197,10 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 
 \t\t\t\t\t\t\t\t<!-- Hamburger -->
 
-\t\t\t\t\t\t\t\t<div class=\"user\"><a href=\"#\"><i class=\"fa fa-user\" aria-hidden=\"true\"></i></a></div>
+\t\t\t\t\t\t\t\t<div class=\"user\"><a href=\"";
+        // line 101
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+        yield "\"><i class=\"fa fa-user\" aria-hidden=\"true\"></i></a></div>
 \t\t\t\t\t\t\t\t<div class=\"hamburger menu_mm\">
 \t\t\t\t\t\t\t\t\t<i class=\"fa fa-bars menu_mm\" aria-hidden=\"true\"></i>
 \t\t\t\t\t\t\t\t</div>
@@ -203,6 +224,10 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t\t</div>
 \t\t<nav class=\"menu_nav\">
 \t\t\t<ul class=\"menu_mm\">
+\t\t\t\t<li class=\"menu_mm\"><a href=\"";
+        // line 125
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin");
+        yield "\">Login</a></li>
 \t\t\t\t<li class=\"menu_mm\"><a href=\"index.html\">Home</a></li>
 \t\t\t\t<li class=\"menu_mm\"><a href=\"courses.html\">Courses</a></li>
 \t\t\t\t<li class=\"menu_mm\"><a href=\"instructors.html\">Instructors</a></li>
@@ -225,10 +250,13 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t</div>
 \t</header>
         ";
-        // line 143
+        // line 147
         yield from $this->unwrap()->yieldBlock('body', $context, $blocks);
-        // line 152
-        yield "        \t<footer class=\"footer\">
+        // line 156
+        yield "\t\t";
+        if ((CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, CoreExtension::getAttribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 156, $this->source); })()), "request", [], "any", false, false, false, 156), "attributes", [], "any", false, false, false, 156), "get", ["_route"], "method", false, false, false, 156) != "app_login")) {
+            // line 157
+            yield "        \t<footer class=\"footer\">
 \t\t<div class=\"footer_body\">
 \t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"row\">
@@ -236,7 +264,7 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t\t\t\t\t<!-- Newsletter -->
 \t\t\t\t\t<div class=\"col-lg-3 footer_col\">
 \t\t\t\t\t\t<div class=\"newsletter_container d-flex flex-column align-items-start justify-content-end\">
-\t\t\t\t\t\t\t<div class=\"footer_logo mb-auto\"><a href=\"#\">Lingua</a></div>
+\t\t\t\t\t\t\t<div class=\"footer_logo mb-auto\"><a href=\"#\">Ens Tétouan</a></div>
 \t\t\t\t\t\t\t<div class=\"footer_title\">Subscribe</div>
 \t\t\t\t\t\t\t<form action=\"#\" id=\"newsletter_form\" class=\"newsletter_form\">
 \t\t\t\t\t\t\t\t<input type=\"email\" class=\"newsletter_input\" placeholder=\"Email\" required=\"required\">
@@ -296,7 +324,7 @@ class __TwigTemplate_3cc9ee25730f8acd5b1c7acbd928767b extends Template
 \t\t\t\t\t<div class=\"col\">
 \t\t\t\t\t\t<div class=\"copyright_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start\">
 \t\t\t\t\t\t\t<div class=\"cr\"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class=\"fa fa-heart-o\" aria-hidden=\"true\"></i> by <a href=\"https://colorlib.com\" target=\"_blank\">Colorlib</a> &amp; distributed by <a href=\"https://themewagon.com\" target=\"_blank\">ThemeWagon</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> \t
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 \t\t\t\t\t\t\t<div class=\"cr_right ml-md-auto\">
 \t\t\t\t\t\t\t\t<div class=\"footer_phone\"><span class=\"cr_title\">phone:</span>+44 300 303 0266</div>
@@ -315,35 +343,38 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t</div>
 \t\t</div>
 \t</footer>
-\t<div>
+\t       ";
+        }
+        // line 245
+        yield "\t<div>
     </body>
 
         <script src=\"";
-        // line 242
+        // line 248
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery-3.2.1.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 243
+        // line 249
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/bootstrap4/popper.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 244
+        // line 250
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/bootstrap4/bootstrap.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 245
+        // line 251
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/OwlCarousel2-2.2.1/owl.carousel.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 246
+        // line 252
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/easing/easing.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 247
+        // line 253
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("plugins/parallax-js-master/parallax.min.js"), "html", null, true);
         yield "\"></script>
         <script src=\"";
-        // line 248
+        // line 254
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/blog.js"), "html", null, true);
         yield "\"></script>
 </html>
@@ -377,7 +408,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         return; yield '';
     }
 
-    // line 143
+    // line 147
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -387,7 +418,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 144
+        // line 148
         yield "
 \t
 
@@ -426,7 +457,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
      */
     public function getDebugInfo()
     {
-        return array (  391 => 144,  381 => 143,  361 => 5,  347 => 248,  343 => 247,  339 => 246,  335 => 245,  331 => 244,  327 => 243,  323 => 242,  231 => 152,  229 => 143,  164 => 81,  160 => 80,  155 => 78,  151 => 77,  147 => 76,  81 => 13,  77 => 12,  73 => 11,  69 => 10,  65 => 9,  61 => 8,  57 => 7,  52 => 5,  46 => 1,);
+        return array (  422 => 148,  412 => 147,  392 => 5,  378 => 254,  374 => 253,  370 => 252,  366 => 251,  362 => 250,  358 => 249,  354 => 248,  349 => 245,  259 => 157,  256 => 156,  254 => 147,  229 => 125,  202 => 101,  173 => 75,  169 => 74,  160 => 68,  156 => 67,  152 => 66,  148 => 65,  143 => 63,  138 => 61,  130 => 56,  126 => 55,  81 => 13,  77 => 12,  73 => 11,  69 => 10,  65 => 9,  61 => 8,  57 => 7,  52 => 5,  46 => 1,);
     }
 
     public function getSourceContext()
@@ -456,26 +487,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t<div class=\"col\">
 \t\t\t\t\t\t\t<div class=\"top_bar_content d-flex flex-row align-items-center justify-content-start\">
-\t\t\t\t\t\t\t\t<div class=\"top_bar_phone\"><span class=\"top_bar_title\">phone:</span>+44 300 303 0266</div>
+\t\t\t\t\t\t\t\t<div class=\"top_bar_phone\"><span class=\"top_bar_title\">phone:</span>06 16 nmrti makat3tach</div>
 \t\t\t\t\t\t\t\t<div class=\"top_bar_right ml-auto\">
 
 \t\t\t\t\t\t\t\t\t<!-- Language -->
-\t\t\t\t\t\t\t\t\t<div class=\"top_bar_lang\">
-\t\t\t\t\t\t\t\t\t\t<span class=\"top_bar_title\">site language:</span>
-\t\t\t\t\t\t\t\t\t\t<ul class=\"lang_list\">
-\t\t\t\t\t\t\t\t\t\t\t<li class=\"hassubs\">
-\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">English<i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i></a>
-\t\t\t\t\t\t\t\t\t\t\t\t<ul>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Ukrainian</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Japanese</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Lithuanian</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Swedish</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"#\">Italian</a></li>
-\t\t\t\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t\t</div>
-
+\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t<!-- Social -->
 \t\t\t\t\t\t\t\t\t<div class=\"top_bar_social\">
 \t\t\t\t\t\t\t\t\t\t<span class=\"top_bar_title social_title\">follow us</span>
@@ -494,24 +510,42 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t</div>
 
 \t\t<!-- Header Content -->
-\t\t<div class=\"header_container\">
+\t\t<div class=\"header_container\"> \t
 \t\t\t<div class=\"container\">
 \t\t\t\t<div class=\"row\">
 \t\t\t\t\t<div class=\"col\">
 \t\t\t\t\t\t<div class=\"header_content d-flex flex-row align-items-center justify-content-start\">
 \t\t\t\t\t\t\t<div class=\"logo_container mr-auto\">
-\t\t\t\t\t\t\t\t<a href=\"#\">
-\t\t\t\t\t\t\t\t\t<div class=\"logo_text\">Lingua</div>
+\t\t\t\t\t\t\t\t<a href=\"{{ path('app_home') }}\">
+\t\t\t\t\t\t\t\t\t<div class=\"logo_text\"><img src=\"{{asset('images/ens logo .png')}}\"width=\"150px\" alt=\"\"></div>
 \t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<nav class=\"main_nav_contaner\">
 \t\t\t\t\t\t\t\t<ul class=\"main_nav\">
 \t\t\t\t\t\t\t\t\t<li id=\"Home-display\"><a href=\"{{ path('app_home') }}\">Home</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Courses-display\"><a href=\"{{ path('app_blog') }}\">Courses</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Instructors-display\"><a href=\"{{ path('app_blog') }}\">Instructors</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Events-display\"><a href=\"#\">Events</a></li>
+\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t<li id=\"Instructors-display\"><a href=\"{{ path('app_enseignants') }}\">Instructors</a></li>
+\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t<li id=\"Blog-display\"><a href=\"{{ path('app_blog') }}\">Blog</a></li>
-\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"{{ path('app_blog') }}\">Contact</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"{{ path('app_contact') }}\">Contact</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"{{ path('app_departements') }}\">Département</a></li>
+\t\t\t\t\t\t\t\t\t<li id=\"Contact-display\"><a href=\"{{ path('app_blog') }}\">
+\t\t\t\t\t\t\t\t\t<div class=\"top_bar_lang\">
+\t\t\t\t\t\t\t\t\t\t<ul class=\"lang_list\">
+\t\t\t\t\t\t\t\t\t\t\t<li class=\"hassubs\">
+\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"#\">Espace<i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i></a>
+\t\t\t\t\t\t\t\t\t\t\t\t<ul>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"{{ path('admin')}}\">Admin</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<li><a href=\"{{ path('etudiant_search')}}\">Etudiants</a></li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t</div>
+
+\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t</a></li>
+
 \t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t</nav>
 \t\t\t\t\t\t\t<div class=\"header_content_right ml-auto text-right\">
@@ -528,7 +562,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 \t\t\t\t\t\t\t\t<!-- Hamburger -->
 
-\t\t\t\t\t\t\t\t<div class=\"user\"><a href=\"#\"><i class=\"fa fa-user\" aria-hidden=\"true\"></i></a></div>
+\t\t\t\t\t\t\t\t<div class=\"user\"><a href=\"{{path('admin')}}\"><i class=\"fa fa-user\" aria-hidden=\"true\"></i></a></div>
 \t\t\t\t\t\t\t\t<div class=\"hamburger menu_mm\">
 \t\t\t\t\t\t\t\t\t<i class=\"fa fa-bars menu_mm\" aria-hidden=\"true\"></i>
 \t\t\t\t\t\t\t\t</div>
@@ -552,6 +586,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t</div>
 \t\t<nav class=\"menu_nav\">
 \t\t\t<ul class=\"menu_mm\">
+\t\t\t\t<li class=\"menu_mm\"><a href=\"{{path('admin')}}\">Login</a></li>
 \t\t\t\t<li class=\"menu_mm\"><a href=\"index.html\">Home</a></li>
 \t\t\t\t<li class=\"menu_mm\"><a href=\"courses.html\">Courses</a></li>
 \t\t\t\t<li class=\"menu_mm\"><a href=\"instructors.html\">Instructors</a></li>
@@ -582,6 +617,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
         {% endblock %}
+\t\t{% if app.request.attributes.get('_route') != 'app_login' %}
         \t<footer class=\"footer\">
 \t\t<div class=\"footer_body\">
 \t\t\t<div class=\"container\">
@@ -590,7 +626,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t\t\t<!-- Newsletter -->
 \t\t\t\t\t<div class=\"col-lg-3 footer_col\">
 \t\t\t\t\t\t<div class=\"newsletter_container d-flex flex-column align-items-start justify-content-end\">
-\t\t\t\t\t\t\t<div class=\"footer_logo mb-auto\"><a href=\"#\">Lingua</a></div>
+\t\t\t\t\t\t\t<div class=\"footer_logo mb-auto\"><a href=\"#\">Ens Tétouan</a></div>
 \t\t\t\t\t\t\t<div class=\"footer_title\">Subscribe</div>
 \t\t\t\t\t\t\t<form action=\"#\" id=\"newsletter_form\" class=\"newsletter_form\">
 \t\t\t\t\t\t\t\t<input type=\"email\" class=\"newsletter_input\" placeholder=\"Email\" required=\"required\">
@@ -650,7 +686,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t\t\t<div class=\"col\">
 \t\t\t\t\t\t<div class=\"copyright_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start\">
 \t\t\t\t\t\t\t<div class=\"cr\"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class=\"fa fa-heart-o\" aria-hidden=\"true\"></i> by <a href=\"https://colorlib.com\" target=\"_blank\">Colorlib</a> &amp; distributed by <a href=\"https://themewagon.com\" target=\"_blank\">ThemeWagon</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> \t
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 \t\t\t\t\t\t\t<div class=\"cr_right ml-md-auto\">
 \t\t\t\t\t\t\t\t<div class=\"footer_phone\"><span class=\"cr_title\">phone:</span>+44 300 303 0266</div>
@@ -669,6 +705,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 \t\t\t</div>
 \t\t</div>
 \t</footer>
+\t       {% endif %}
 \t<div>
     </body>
 

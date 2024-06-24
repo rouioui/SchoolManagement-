@@ -3,3 +3,10 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+# config/routes/submit_form.yaml
+
+submit_form:
+    path: /submit-form
+    controller: App\Controller\YourController::submitForm
+    methods: [POST]

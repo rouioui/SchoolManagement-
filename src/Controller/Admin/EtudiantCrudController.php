@@ -8,6 +8,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\BooleanField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
@@ -29,13 +30,17 @@ class EtudiantCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id')->hideOnForm(),
+            ImageField::new('image')->setBasePath(self::ETUDIANT_BASE_PATH)
+            ->setUploadDir(self::ETUDIANT_UPLOAD_DIR)->setSortable(false),
             TextField::new('nom'),
             TextField::new('prenom'),
             TextField::new('cne'),
-            ImageField::new('image')->setBasePath(self::ETUDIANT_BASE_PATH)
-            ->setUploadDir(self::ETUDIANT_UPLOAD_DIR)->setSortable(false),
+            TextField::new('cin'),
+            DateField::new('dateNaissance'),
+           
             DateTimeField::new('createdAt')->hideOnForm(),
             DateTimeField::new('updatedAt')->hideOnForm(),
+            
             AssociationField::new('Niveau'),
             AssociationField::new('Tuteur')
     

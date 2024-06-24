@@ -23,26 +23,11 @@
 					<div class="row">
 						<div class="col">
 							<div class="top_bar_content d-flex flex-row align-items-center justify-content-start">
-								<div class="top_bar_phone"><span class="top_bar_title">phone:</span>+44 300 303 0266</div>
+								<div class="top_bar_phone"><span class="top_bar_title">phone:</span>06 16 nmrti makat3tach</div>
 								<div class="top_bar_right ml-auto">
 
 									<!-- Language -->
-									<div class="top_bar_lang">
-										<span class="top_bar_title">site language:</span>
-										<ul class="lang_list">
-											<li class="hassubs">
-												<a href="#">English<i class="fa fa-angle-down" aria-hidden="true"></i></a>
-												<ul>
-													<li><a href="#">Ukrainian</a></li>
-													<li><a href="#">Japanese</a></li>
-													<li><a href="#">Lithuanian</a></li>
-													<li><a href="#">Swedish</a></li>
-													<li><a href="#">Italian</a></li>
-												</ul>
-											</li>
-										</ul>
-									</div>
-
+								
 									<!-- Social -->
 									<div class="top_bar_social">
 										<span class="top_bar_title social_title">follow us</span>
@@ -61,24 +46,42 @@
 		</div>
 
 		<!-- Header Content -->
-		<div class="header_container">
+		<div class="header_container"> 	
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<div class="header_content d-flex flex-row align-items-center justify-content-start">
 							<div class="logo_container mr-auto">
-								<a href="#">
-									<div class="logo_text">Lingua</div>
+								<a href="{{ path('app_home') }}">
+									<div class="logo_text"><img src="{{asset('images/ens logo .png')}}"width="150px" alt=""></div>
 								</a>
 							</div>
 							<nav class="main_nav_contaner">
 								<ul class="main_nav">
 									<li id="Home-display"><a href="{{ path('app_home') }}">Home</a></li>
-									<li id="Courses-display"><a href="{{ path('app_blog') }}">Courses</a></li>
-									<li id="Instructors-display"><a href="{{ path('app_blog') }}">Instructors</a></li>
-									<li id="Events-display"><a href="#">Events</a></li>
+									
+									<li id="Instructors-display"><a href="{{ path('app_enseignants') }}">Instructors</a></li>
+								
 									<li id="Blog-display"><a href="{{ path('app_blog') }}">Blog</a></li>
-									<li id="Contact-display"><a href="{{ path('app_blog') }}">Contact</a></li>
+									<li id="Contact-display"><a href="{{ path('app_contact') }}">Contact</a></li>
+									<li id="Contact-display"><a href="{{ path('app_departements') }}">Département</a></li>
+									<li id="Contact-display"><a href="{{ path('app_blog') }}">
+									<div class="top_bar_lang">
+										<ul class="lang_list">
+											<li class="hassubs">
+												<a href="#">Espace<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+												<ul>
+													<li><a href="{{ path('admin')}}">Admin</a></li>
+													<li><a href="{{ path('etudiant_search')}}">Etudiants</a></li>
+													
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									
+									</a></li>
+
 								</ul>
 							</nav>
 							<div class="header_content_right ml-auto text-right">
@@ -95,7 +98,7 @@
 
 								<!-- Hamburger -->
 
-								<div class="user"><a href="#"><i class="fa fa-user" aria-hidden="true"></i></a></div>
+								<div class="user"><a href="{{path('admin')}}"><i class="fa fa-user" aria-hidden="true"></i></a></div>
 								<div class="hamburger menu_mm">
 									<i class="fa fa-bars menu_mm" aria-hidden="true"></i>
 								</div>
@@ -119,6 +122,7 @@
 		</div>
 		<nav class="menu_nav">
 			<ul class="menu_mm">
+				<li class="menu_mm"><a href="{{path('admin')}}">Login</a></li>
 				<li class="menu_mm"><a href="index.html">Home</a></li>
 				<li class="menu_mm"><a href="courses.html">Courses</a></li>
 				<li class="menu_mm"><a href="instructors.html">Instructors</a></li>
@@ -149,6 +153,7 @@
 
 
         {% endblock %}
+		{% if app.request.attributes.get('_route') != 'app_login' %}
         	<footer class="footer">
 		<div class="footer_body">
 			<div class="container">
@@ -157,7 +162,7 @@
 					<!-- Newsletter -->
 					<div class="col-lg-3 footer_col">
 						<div class="newsletter_container d-flex flex-column align-items-start justify-content-end">
-							<div class="footer_logo mb-auto"><a href="#">Lingua</a></div>
+							<div class="footer_logo mb-auto"><a href="#">Ens Tétouan</a></div>
 							<div class="footer_title">Subscribe</div>
 							<form action="#" id="newsletter_form" class="newsletter_form">
 								<input type="email" class="newsletter_input" placeholder="Email" required="required">
@@ -217,7 +222,7 @@
 					<div class="col">
 						<div class="copyright_content d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
 							<div class="cr"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> 	
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 							<div class="cr_right ml-md-auto">
 								<div class="footer_phone"><span class="cr_title">phone:</span>+44 300 303 0266</div>
@@ -236,6 +241,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</div>
 		</div>
 	</footer>
+	       {% endif %}
 	<div>
     </body>
 

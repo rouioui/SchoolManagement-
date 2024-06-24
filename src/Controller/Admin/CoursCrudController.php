@@ -30,7 +30,9 @@ class CoursCrudController extends AbstractCrudController
             DateField::new('createdAt')->hideOnForm(),
             DateField::new('updatedAt')->hideOnForm(),
             BooleanField::new('active'),
-            AssociationField::new("Enseignant")
+            AssociationField::new("Enseignant"),
+            AssociationField::new("Departement")
+            
         ];
     }
    

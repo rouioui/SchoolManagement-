@@ -42,10 +42,11 @@ class Enseignant
     #[ORM\Column]
     private ?bool $active = null;
 
-    public function __construct()
-    {
-        $this->cours = new ArrayCollection();
-    }
+    #[ORM\ManyToOne(inversedBy: 'enseignants')]
+    #[ORM\JoinColumn(nullable: true)]
+    private ?Departements $Departement = null;
+
+  
 
     public function getId(): ?int
     {
@@ -169,4 +170,18 @@ class Enseignant
 {
     return $this->prenom . ' ' . $this->nom;
 }
+
+    public function getDepartement(): ?Departements
+    {
+        return $this->Departement;
+    }
+
+    public function setDepartement(?Departements $Departement): static
+    {
+        $this->Departement = $Departement;
+
+        return $this;
+    }
+
+
 }

@@ -40,6 +40,10 @@ class Cours
     #[ORM\JoinColumn(nullable: false)]
     private ?Enseignant $Enseignant = null;
 
+    #[ORM\ManyToOne]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Departements $Departement = null;
+
     public function __construct()
     {
         $this->notes = new ArrayCollection();
@@ -153,6 +157,18 @@ class Cours
     public function setEnseignant(?Enseignant $Enseignant): static
     {
         $this->Enseignant = $Enseignant;
+
+        return $this;
+    }
+
+    public function getDepartement(): ?Departements
+    {
+        return $this->Departement;
+    }
+
+    public function setDepartement(?Departements $Departement): static
+    {
+        $this->Departement = $Departement;
 
         return $this;
     }
